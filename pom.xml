@@ -14,13 +14,24 @@
     <properties>
         <mockito.version>2.26.0</mockito.version>
         <junit.version>5.5.2</junit.version>
-        <image.comparison.version>4.3.0</image.comparison.version>
+        <image.comparison.version>4.4.0</image.comparison.version>
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javadoc.plugin.version>3.1.1</javadoc.plugin.version>
-        <source.plugin.version>3.2.0</source.plugin.version>
+        <javadoc.plugin.version>3.10.1</javadoc.plugin.version>
+        <source.plugin.version>3.3.0</source.plugin.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>image-comparison</id>
+            <url>https://github.com/romankh3/image-comparison/mvn-repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
@@ -34,6 +45,11 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.romankh3</groupId>
+            <artifactId>image-comparison</artifactId>
+            <version>${image.comparison.version}</version>
         </dependency>
     </dependencies>
 
